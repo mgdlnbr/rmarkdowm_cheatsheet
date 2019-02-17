@@ -1,0 +1,61 @@
+\documentclass[landscape,twocolumn,letterpaper]{article}
+\title{Quick Guide to RMarkdown}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{fullpage}
+
+
+\begin{document}
+	
+	\begin{center}
+		\Large{\textbf{A quick guide to RMarkdown}} \\
+	\end{center}
+		
+		\section{What is RMarkdown}
+		Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. You can embed and evaluate code chunks within these documents. Makdown documents have the extension $.Rmd$ and consist of three types of content:
+		 
+		\begin{enumerate}
+		\item Metainformation like title and author, 
+		\item code chunks and 
+		\item text\\
+		\end{enumerate}
+		
+		\section{Installation}
+		For installing RMarkdown use one of the following commands in RStudio:
+		\begin{lstlisting}
+	install.packages("rmarkdown")
+		\end{lstlisting}	
+		
+		If you want to generate PDF output, you will need to install LaTeX. In order to generate a report, use the "Knit" button in RStudio or use the \textit{render()} command.
+		
+		\section{Creating a RMarkdown Document}
+		Using RStudio click on File - New File - R Markdown. Select your prefered Default Output Format. The default document will look like this will contain a header with the document title, author, creation date and output format.
+		
+		
+		\section{Embedding R Code}
+		%http://www.jacolienvanrij.com/Tutorials/tutorialMarkdown.html
+
+		\section{Embedding Plots}
+		
+
+		
+		\section{Transforming RMarkdown Files}
+		There are two ways to transform RMarkdown Files:
+		\item 1. knit
+		\item 2. convert\\
+		
+		The \textit{knitr} functions are already included in the \textit{rmarkdown} package. \textit{knitr} will run each chunk of R code in the document and append the results of the code to the document next to the code chunk.\\
+		Transforming the RMarkdown file into a new format is called converting. This will convert the .Rmd file into HTML, PDF or a MS Word file without changing text, code, graphs and formatting from the original file.\\
+		It is common to do both these transformations in one step. For creating a report, either use the  use the command \textit{rmarkdown::render()}.
+
+
+		\section{Resources}
+		https://rmarkdown.rstudio.com/lesson-6.html\\
+		https://rmarkdown.rstudio.com/authoring\_basics.html\\
+		https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf
+		
+		
+
+		
+
+\end{document}
